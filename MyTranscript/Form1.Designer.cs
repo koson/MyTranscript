@@ -32,10 +32,10 @@ namespace MyTranscript
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxGrade = new System.Windows.Forms.TextBox();
+            this.textBoxCourseCredit = new System.Windows.Forms.TextBox();
+            this.textBoxCourseName = new System.Windows.Forms.TextBox();
+            this.textBoxCourseID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -75,10 +75,10 @@ namespace MyTranscript
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxGrade);
+            this.groupBox1.Controls.Add(this.textBoxCourseCredit);
+            this.groupBox1.Controls.Add(this.textBoxCourseName);
+            this.groupBox1.Controls.Add(this.textBoxCourseID);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label5);
@@ -92,41 +92,41 @@ namespace MyTranscript
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add new course";
             // 
-            // textBox4
+            // textBoxGrade
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(135, 117);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(54, 26);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.Text = "B+";
+            this.textBoxGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGrade.Location = new System.Drawing.Point(135, 117);
+            this.textBoxGrade.Name = "textBoxGrade";
+            this.textBoxGrade.Size = new System.Drawing.Size(54, 26);
+            this.textBoxGrade.TabIndex = 7;
+            this.textBoxGrade.Text = "B+";
             // 
-            // textBox3
+            // textBoxCourseCredit
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(135, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(54, 26);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "3";
+            this.textBoxCourseCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCourseCredit.Location = new System.Drawing.Point(135, 88);
+            this.textBoxCourseCredit.Name = "textBoxCourseCredit";
+            this.textBoxCourseCredit.Size = new System.Drawing.Size(54, 26);
+            this.textBoxCourseCredit.TabIndex = 6;
+            this.textBoxCourseCredit.Text = "3";
             // 
-            // textBox2
+            // textBoxCourseName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(135, 59);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(236, 26);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Computer Laboratory";
+            this.textBoxCourseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCourseName.Location = new System.Drawing.Point(135, 59);
+            this.textBoxCourseName.Name = "textBoxCourseName";
+            this.textBoxCourseName.Size = new System.Drawing.Size(236, 26);
+            this.textBoxCourseName.TabIndex = 5;
+            this.textBoxCourseName.Text = "Computer Laboratory";
             // 
-            // textBox1
+            // textBoxCourseID
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(135, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "12345678";
+            this.textBoxCourseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCourseID.Location = new System.Drawing.Point(135, 30);
+            this.textBoxCourseID.Name = "textBoxCourseID";
+            this.textBoxCourseID.Size = new System.Drawing.Size(100, 26);
+            this.textBoxCourseID.TabIndex = 4;
+            this.textBoxCourseID.Text = "12345678";
             // 
             // label3
             // 
@@ -147,6 +147,7 @@ namespace MyTranscript
             this.button1.TabIndex = 3;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.AddGrade);
             // 
             // label5
             // 
@@ -212,10 +213,10 @@ namespace MyTranscript
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxGrade;
+        private System.Windows.Forms.TextBox textBoxCourseCredit;
+        private System.Windows.Forms.TextBox textBoxCourseName;
+        private System.Windows.Forms.TextBox textBoxCourseID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
