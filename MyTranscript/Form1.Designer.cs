@@ -29,8 +29,8 @@ namespace MyTranscript
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelUniversityName = new System.Windows.Forms.Label();
+            this.labelFacultyName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxGrade = new System.Windows.Forms.TextBox();
             this.textBoxCourseCredit = new System.Windows.Forms.TextBox();
@@ -46,6 +46,7 @@ namespace MyTranscript
             this.tabPageYear1Sem1 = new System.Windows.Forms.TabPage();
             this.tabPageYear1Sem2 = new System.Windows.Forms.TabPage();
             this.dataGridViewY1S2 = new System.Windows.Forms.DataGridView();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewY1S1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -54,35 +55,36 @@ namespace MyTranscript
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewY1S2)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelUniversityName
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelUniversityName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(706, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "My university name";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelUniversityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUniversityName.Location = new System.Drawing.Point(12, 9);
+            this.labelUniversityName.Name = "labelUniversityName";
+            this.labelUniversityName.Size = new System.Drawing.Size(706, 42);
+            this.labelUniversityName.TabIndex = 0;
+            this.labelUniversityName.Text = "My university name";
+            this.labelUniversityName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // labelFacultyName
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelFacultyName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(706, 42);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "My faculty name";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelFacultyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFacultyName.Location = new System.Drawing.Point(12, 61);
+            this.labelFacultyName.Name = "labelFacultyName";
+            this.labelFacultyName.Size = new System.Drawing.Size(706, 42);
+            this.labelFacultyName.TabIndex = 1;
+            this.labelFacultyName.Text = "My faculty name";
+            this.labelFacultyName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.buttonSave);
             this.groupBox1.Controls.Add(this.textBoxGrade);
             this.groupBox1.Controls.Add(this.textBoxCourseCredit);
             this.groupBox1.Controls.Add(this.textBoxCourseName);
@@ -237,6 +239,17 @@ namespace MyTranscript
             this.dataGridViewY1S2.Size = new System.Drawing.Size(692, 194);
             this.dataGridViewY1S2.TabIndex = 0;
             // 
+            // buttonSave
+            // 
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.Location = new System.Drawing.Point(408, 115);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 28);
+            this.buttonSave.TabIndex = 8;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.SaveFile);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,8 +258,8 @@ namespace MyTranscript
             this.ClientSize = new System.Drawing.Size(730, 540);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelFacultyName);
+            this.Controls.Add(this.labelUniversityName);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
@@ -262,8 +275,8 @@ namespace MyTranscript
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelUniversityName;
+        private System.Windows.Forms.Label labelFacultyName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxGrade;
         private System.Windows.Forms.TextBox textBoxCourseCredit;
@@ -279,6 +292,7 @@ namespace MyTranscript
         private System.Windows.Forms.TabPage tabPageYear1Sem1;
         private System.Windows.Forms.TabPage tabPageYear1Sem2;
         private System.Windows.Forms.DataGridView dataGridViewY1S2;
+        private System.Windows.Forms.Button buttonSave;
     }
 }
 
