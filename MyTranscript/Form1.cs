@@ -45,6 +45,56 @@ namespace MyTranscript
 
             }
         }
+
+        private void SaveFile(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            int counter;
+            //// prepare data
+            // write header
+            sb.AppendLine(labelUniversityName.Text);
+            sb.AppendLine(labelFacultyName.Text);
+
+
+            // Year 1 Semester 1
+            if (year1Sem1.Count > 0)
+            {
+                sb.AppendLine("");
+                sb.AppendLine("Year 1 Semester 1");
+                sb.AppendLine("No, Course ID, Course Name, Credit, Grade");
+                counter = 1;
+                foreach (var item in year1Sem1)
+                {
+                    sb.AppendLine(counter.ToString() + ", " + item.ToString());
+                    counter++;
+                }
+            }
+
+            // Year 1 Semester 2
+            if (year1Sem2.Count > 0)
+            {
+                sb.AppendLine("");
+                sb.AppendLine("Year 1 Semester 2");
+                sb.AppendLine("No, Course ID, Course Name, Credit, Grade");
+                counter = 1;
+                foreach (var item in year1Sem2)
+                {
+                    sb.AppendLine(counter.ToString() + ", " + item.ToString());
+                    counter++;
+                }
+            }
+
+            string filename = "mygrade.csv";
+            WriteToFile(filename, sb);
+
+        }
+
+        private void WriteToFile(string filename, StringBuilder sb)
+        {
+            Console.WriteLine(sb.ToString());
+            System.IO.File.WriteAllText(filename, sb.ToString());
+
+        }
     }
 
     class Course
@@ -53,5 +103,10 @@ namespace MyTranscript
         public string CourseName { get; set; }
         public string CourseCredit { get; set; }
         public string Grade { get; set; }
+
+        public override string ToString()
+        {
+            return CourseID + "," +CourseName + "," + CourseCredit + "," + Grade;
+        }
     }
 }
