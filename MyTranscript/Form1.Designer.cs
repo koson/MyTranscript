@@ -242,7 +242,7 @@ namespace MyTranscript
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.Location = new System.Drawing.Point(408, 115);
+            this.buttonSave.Location = new System.Drawing.Point(377, 115);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 28);
             this.buttonSave.TabIndex = 8;
